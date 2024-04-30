@@ -1,0 +1,298 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body{
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+section{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+  
+table {
+  width: 60%;
+  border-collapse: collapse;
+  height: fit-content;
+  
+}
+
+table th {
+  background-color: #ffffff;
+  text-align: center;
+  border: 1px solid hsl(0, 0%, 20%,0.2) ;
+  border-top: 3px solid rgb(95, 188, 241);
+}
+th,td{
+  width: 200px;
+}
+.TrHead{
+  display: flex;
+  padding: 10px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+table td {
+  padding: 10px;
+  text-align: center;
+  border: 1px solid hsl(0, 0%, 20%,0.2) ;
+}
+
+
+table th i, table td i {
+  margin-right: 5px;
+}
+
+.fa-cake-candles{
+  color: tomato;
+}
+.fa-sort{
+  font-size: 13px;
+  cursor: pointer; 
+}
+
+
+
+
+
+.Genderfemale{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #e03997;
+  padding: 8px 15px;
+  border: none;
+  color: white;
+  font-size:1rem;
+  border-radius: 10px;
+  margin:0 auto;
+}
+
+.Gendermale{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #4fb5ad;
+  padding: 8px 15px;
+  border: none;
+  color: white;
+  font-size:1rem;
+  border-radius: 10px;
+  margin:0 auto;
+}
+
+
+.ACTRBNT{
+  display: flex;
+  width: fit-content;
+ margin: 0 auto;
+  gap: 20px;
+}
+.ActionBNT {
+  display: flex;
+  text-align: center !important;
+  border: none;
+  background-color: rgb(70, 163, 70);
+  color: white;
+  padding: 10px;
+  font-size: 12px;
+  border-radius: 10px;
+  margin: 0 auto;
+  cursor: pointer;
+
+}
+
+.ShowPassword{
+  display: flex;
+  text-align: center !important;
+  border: none;
+  background-color: rgb(50, 168, 219);
+  color: white;
+  padding: 10px;
+  font-size: 12px;
+  border-radius: 10px;
+  margin: 0 auto;
+  cursor: pointer;
+  
+}
+.ActionBNT i ,.ShowPassword i{
+  margin: 0;
+  padding: 0;
+}
+
+
+/* inputs */
+
+.form-container {
+  background-color: hsla(197, 29%, 91%, 0.8);
+  width:20%;
+  padding: 20px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+.form-container h2{
+  padding: 10px 0px;
+  color: #3053df;
+  text-align: center;
+}
+
+
+.input-group {
+  margin-bottom: 15px;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.input-group input,
+.input-group select {
+  width: calc(100% - 30px); /* Adjust input width */
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+
+.input-group select {
+  width: calc(100% - 10px); /* Adjust input width */
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.InputSubmit {
+  display: block;
+  width: 100%;
+  border: none;
+  background-color: #6f87e6;
+  color: white;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.InputSubmit:hover {
+  background-color: #c0266d;
+  transition: .4s all ease;
+}
+
+#AlertWin {
+  position: fixed;
+  top: 0; 
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 5px;
+  max-width: fit-content;
+  width: 100%;
+  height: fit-content;
+  padding: 20px 50px;
+  color: white;
+  gap: 30px;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+#AlertWin.AlertWinRed{
+  background-color: hsl(9, 100%, 64%);
+}
+#AlertWin.AlertWinYellow{
+  background-color: hsl(35, 83%, 57%);
+}
+
+
+
+
+
+#AlertWin i {
+  font-size: 2rem;
+  padding: 0;
+  margin: 0;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+#AlertWin {
+  opacity: 0;
+  animation: fadeIn 1s forwards; 
+  transition: opacity 1s; 
+}
+
+#AlertWin.fade-out {
+  animation: fadeOut 0.5s forwards; 
+}
+
+@media screen and (max-width: 1200px) {
+  section{
+    flex-direction: column;
+  }
+  table{
+    width: 100%;
+  }
+  .form-container{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+
+  }
+  .form-container h2{
+    display: none;
+  }
+  .input-group{
+    width: 50vw;
+  }
+  .InputSubmit{
+    width: 50%;
+  }
+}
+
+
+@media screen and (max-width: 700px) {
+  .form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    margin: 0 auto; /* This centers the container horizontally */
+  }
+
+ 
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+       
+    <title>Table</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>   
+
+
+
+    <section> 
+        <div class="form-container">
+            <h2>Registration Form</h2>
+            <div class="input-group">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username">
+            </div>
+            <div class="input-group">
+                <label for="text">Password:</label>
+                <input type="password" id="password" name="password">
+            </div>
+            <div class="input-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email">
+            </div>
+            <div class="input-group">
+                <label for="gender">Gender:</label>
+                <select id="gender" name="gender">
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <label for="birthday">Birthday:</label>
+                <input type="date" id="birthday" name="birthday">
+            </div>
+            <button class="InputSubmit" onclick="InputSubmit()">Submit</button>
+        </div>
+
+
+        
+        
+        <table id="table">
+            
+            <tr>
+                
+                <th> <span class="TrHead"><span><i class="fa-solid fa-book"></i>Username</span> <i onclick="Sort(name)" class="fa-solid fa-sort"></i></span> </i></th>
+                <th><i class="fa-solid fa-lock"></i>Password</th>
+                <th> <span class="TrHead"> <span><i class="fa-regular fa-envelope"></i>Email</span><i onclick="Sort(email)" class="fa-solid fa-sort"></i></span> </th>
+                <th>  <span class="TrHead">  <span><i class="fa-solid fa-cake-candles"></i>Birthday  </span><i onclick="Sort(date)" class="fa-solid fa-sort"></i></span></th>
+                <th> <span class="TrHead">Gender <i onclick="Sort(gender)" class="fa-solid fa-sort"></i> </span></th>
+                <th>Action</th> 
+            </tr>
+            
+
+
+        </table>
+
+    </section> 
+    
+    
+  
+    <script src="./script.js"></script>
+</body>
+</html>
